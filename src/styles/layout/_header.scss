@@ -1,0 +1,28 @@
+.header__wrapper {
+  margin: rem(20px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__logo {
+  height: rem(15px);
+  width: auto;
+}
+
+.hamburger {
+  height: rem(25px);
+  width: rem(25px);
+  border: 2px solid $color-very-dark-violet;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: rem(5px);
+
+  &__line {
+    width: 100%;
+    height: rem(2px);
+    background-color: $color-very-dark-violet;
+  }
+}

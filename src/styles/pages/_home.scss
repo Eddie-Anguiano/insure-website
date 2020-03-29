@@ -1,0 +1,62 @@
+/////////////////////// HERO ///////////////////
+
+.hero {
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.cta {
+  color: white;
+  text-align: center;
+  padding-top: rem(80px);
+  padding-bottom: rem(80px);
+
+  &__bg-img-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__bg-img-right {
+    position: absolute;
+    right: 0;
+    top: 75%;
+  }
+  &__wrapper {
+    background-color: $color-dark-violet;
+    position: relative;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: rem(20px);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    margin-bottom: rem(30px);
+  }
+}
+
+/////////////////////// SELL ///////////////////
+
+.home-sell {
+  padding-top: rem(200px);
+  padding-bottom: rem(80px);
+  text-align: center;
+
+  &__line {
+    height: 2px;
+    width: 40%;
+    background-color: $color-dark-grayish-violet;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    padding-top: rem(20px);
+  }
+}
