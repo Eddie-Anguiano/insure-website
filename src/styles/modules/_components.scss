@@ -1,0 +1,15 @@
+/*-------------------------------*/
+/* SOCIAL */
+/*-------------------------------*/
+
+.social-links {
+  padding-bottom: rem(25px);
+}
+
+/*-------------------------------*/
+/* SEPARATOR*/
+/*-------------------------------*/
+
+.separator--full-width {
+  @include separator($color-light-gray);
+}

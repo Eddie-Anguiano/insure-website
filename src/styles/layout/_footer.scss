@@ -1,0 +1,27 @@
+.footer {
+  background-color: $color-very-light-gray;
+  padding-top: rem(80px);
+  padding-bottom: rem(80px);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+  &__background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__logo {
+    padding-bottom: rem(25px);
+  }
+
+  &__link-list {
+    margin: rem(20px) 0;
+  }
+
+  &__link {
+    padding: rem(4px);
+  }
+}

@@ -1,4 +1,7 @@
-// Background Images
+/*-------------------------------*/
+/* BACKGROUND IMAGES */
+/*-------------------------------*/
+
 @mixin img-bg(
   $h,
   $w,
@@ -8,7 +11,7 @@
   $bg-repeat: no-repeat,
   $bg-size: cover
 ) {
-  background-image: url('#{$img-path}/#{$img-name}');
+  background-image: url("#{$img-path}/#{$img-name}");
   height: $h;
   width: $w;
   display: $display;
@@ -23,15 +26,15 @@
 
 // Mobile first
 @mixin m1-mq($break) {
-  @if $break == 'small' {
+  @if $break == "small" {
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
       @content;
     }
-  } @else if $break == 'medium' {
+  } @else if $break == "medium" {
     @media (min-width: $breakpoint-md + 1) {
       @content;
     }
-  } @else if $break == 'large' {
+  } @else if $break == "large" {
     @media (min-width: $breakpoint-lg) {
       @content;
     }
@@ -42,17 +45,28 @@
 
 // Desktop first
 @mixin d1-mq($break) {
-  @if $break == 'large' {
+  @if $break == "large" {
     @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
       @content;
     }
-  } @else if $break == 'large-keep' {
+  } @else if $break == "large-keep" {
     @media (max-width: $breakpoint-lg) {
       @content;
     }
-  } @else if $break == 'medium' {
+  } @else if $break == "medium" {
     @media (max-width: $breakpoint-md) {
       @content;
     }
   }
+}
+
+/*-------------------------------*/
+/* SEPARATOR */
+/*-------------------------------*/
+
+@mixin separator($color, $width: 100%) {
+  margin: rem(25px) 0;
+  height: rem(1px);
+  background-color: $color;
+  width: $width;
 }

@@ -1,3 +1,7 @@
+/*-------------------------------*/
+/* BASE */
+/*-------------------------------*/
+
 :root {
   font-size: 16px;
 }
@@ -23,4 +27,43 @@ h1 {
 
 p {
   line-height: 1.6;
+}
+
+/*-------------------------------*/
+/* BUTTONS */
+/*-------------------------------*/
+
+.btn--outline {
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+/*-------------------------------*/
+/* HOME */
+/*-------------------------------*/
+
+.home-sell {
+  &__subheading {
+    text-transform: capitalize;
+  }
+
+  &__content {
+    color: $color-dark-grayish-violet;
+  }
+}
+
+.home-about {
+  color: $color-white;
+}
+
+.footer {
+  text-transform: uppercase;
+
+  &__subheading {
+    color: $color-light-gray;
+  }
+
+  &__links {
+    color: $color-dark-grayish-violet;
+  }
 }

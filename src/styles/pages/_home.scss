@@ -1,4 +1,6 @@
-/////////////////////// HERO ///////////////////
+/*-------------------------------*/
+/* HERO */
+/*-------------------------------*/
 
 .hero {
   &__img {
@@ -23,7 +25,7 @@
   &__bg-img-right {
     position: absolute;
     right: 0;
-    top: 75%;
+    top: 68%;
   }
   &__wrapper {
     background-color: $color-dark-violet;
@@ -42,21 +44,48 @@
   }
 }
 
-/////////////////////// SELL ///////////////////
+/*-------------------------------*/
+/* SELL */
+/*-------------------------------*/
 
 .home-sell {
-  padding-top: rem(200px);
-  padding-bottom: rem(80px);
+  padding-top: rem(130px);
+  padding-bottom: rem(130px);
   text-align: center;
 
   &__line {
-    height: 2px;
+    height: rem(1px);
     width: 40%;
     background-color: $color-dark-grayish-violet;
     margin: 0 auto;
   }
 
   &__heading {
-    padding-top: rem(20px);
+    padding-top: rem(15px);
+  }
+}
+
+/*-------------------------------*/
+/* ABOUT */
+/*-------------------------------*/
+
+.home-about {
+  background-color: $color-dark-violet;
+  padding-top: rem(60px);
+  padding-bottom: rem(60px);
+  text-align: center;
+  position: relative;
+  margin-bottom: rem(130px);
+
+  &__heading {
+    padding: rem(20px);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
