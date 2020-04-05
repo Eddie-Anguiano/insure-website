@@ -3,4 +3,25 @@
   display: inline-block;
   padding: rem(8px) rem(25px);
   background-color: $color-dark-violet;
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-dark-violet;
+  }
+}
+
+.btn--outline-inverse {
+  border: 1px solid $color-dark-violet;
+  display: inline-block;
+  padding: rem(8px) rem(25px);
+  background-color: $color-white;
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+
+  &:hover {
+    background-color: $color-dark-violet;
+    color: $color-white;
+  }
 }

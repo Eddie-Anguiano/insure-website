@@ -1,7 +1,21 @@
 .home-sell {
+  &__cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m1-mq("medium") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
   &__card {
+    flex-direction: column;
     padding-top: rem(20px);
     padding-bottom: rem(20px);
+    max-width: rem(350px);
   }
 
   &__subheading {

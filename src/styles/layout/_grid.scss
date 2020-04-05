@@ -1,9 +1,18 @@
-.wrap-p {
-  padding-left: 15px;
-  padding-right: 15px;
+[class*="wrapper"] {
+  max-width: rem(1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+
+  @include m1-mq("medium") {
+    padding-left: rem(30px);
+    padding-right: rem(30px);
+  }
 }
 
-.wrap-m {
-  margin-left: 15px;
-  margin-right: 15px;
+[class*="mobile"] {
+  @include m1-mq("medium") {
+    display: none;
+  }
 }

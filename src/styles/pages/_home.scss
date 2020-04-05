@@ -3,32 +3,88 @@
 /*-------------------------------*/
 
 .hero {
-  &__img {
+  position: relative;
+  background-color: $color-dark-violet;
+  &__img-mobile {
     width: 100%;
     height: auto;
     display: block;
+
+    @include m1-mq("medium") {
+      display: none;
+    }
+  }
+
+  &__img-bg-right-desktop {
+    display: none;
+
+    @include m1-mq("medium") {
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: auto;
+      top: 0;
+      right: 0;
+      z-index: 100;
+    }
+  }
+
+  &__img-bg-left-desktop {
+    display: none;
+
+    @include m1-mq("medium") {
+      display: block;
+      position: absolute;
+      height: 80%;
+      top: 70%;
+    }
+  }
+
+  &__img-desktop {
+    display: none;
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    top: rem(100px);
+    right: rem(30px);
+
+    z-index: 3;
+
+    @include m1-mq("medium") {
+      display: block;
+    }
   }
 }
 
 .cta {
   color: white;
   text-align: center;
-  padding-top: rem(80px);
-  padding-bottom: rem(80px);
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
 
-  &__bg-img-left {
+  &__separator {
+    display: none;
+
+    @include m1-mq("medium") {
+      @include separator($color-white, 35%);
+      margin-top: 0;
+      display: block;
+    }
+  }
+
+  &__bg-img-left-mobile {
     position: absolute;
     top: 0;
     left: 0;
   }
 
-  &__bg-img-right {
+  &__bg-img-right-mobile {
     position: absolute;
     right: 0;
     top: 68%;
   }
   &__wrapper {
-    background-color: $color-dark-violet;
     position: relative;
   }
 
@@ -42,6 +98,12 @@
   &__content {
     margin-bottom: rem(30px);
   }
+
+  @include m1-mq("medium") {
+    text-align: left;
+    max-width: 50%;
+    margin-left: 0;
+  }
 }
 
 /*-------------------------------*/
@@ -53,11 +115,30 @@
   padding-bottom: rem(130px);
   text-align: center;
 
+  @include m1-mq("medium") {
+    text-align: left;
+  }
+
+  @include m1-mq("medium") {
+    padding-top: rem(260px);
+  }
+
   &__line {
     height: rem(1px);
     width: 40%;
     background-color: $color-dark-grayish-violet;
     margin: 0 auto;
+
+    @include m1-mq("medium") {
+      margin: 0 0;
+      width: 20%;
+    }
+  }
+
+  &__card:nth-child(-n + 2) {
+    @include m1-mq("medium") {
+      padding-right: rem(35px);
+    }
   }
 
   &__heading {
@@ -77,15 +158,64 @@
   position: relative;
   margin-bottom: rem(130px);
 
+  @include m1-mq("medium") {
+    overflow: hidden;
+  }
+
+  &__btn-container {
+    @include m1-mq("medium") {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include m1-mq("medium") {
+    padding: rem(40px);
+  }
+
+  @include m1-mq("medium") {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
   &__heading {
     padding: rem(20px);
     position: relative;
     z-index: 2;
+    margin: 0;
+
+    @include m1-mq("medium") {
+      text-align: left;
+      max-width: 70%;
+      padding: 0;
+    }
   }
 
-  &__bg-img {
+  &__line-break {
+    @include m1-mq("medium") {
+      display: block;
+    }
+  }
+
+  &__bg-img-mobile {
     position: absolute;
     top: 0;
     right: 0;
+
+    @include m1-mq("medium") {
+      display: none;
+    }
+  }
+
+  &__bg-img-desktop {
+    display: none;
+
+    @include m1-mq("medium") {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }

@@ -38,6 +38,10 @@
     @media (min-width: $breakpoint-lg) {
       @content;
     }
+  } @else if $break == "small-keep" {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
   } @else {
     @error "No value could be retrieced for '#{$break}'";
   }

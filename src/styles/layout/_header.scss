@@ -1,10 +1,56 @@
-.header__wrapper {
-  margin-top: rem(20px);
-  margin-bottom: rem(20px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+.header {
+  &__wrapper {
+    margin-top: rem(20px);
+    margin-bottom: rem(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__nav-desktop {
+    display: none;
+
+    @include m1-mq("medium") {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__nav-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: $color-dark-violet;
+    color: $color-white;
+    z-index: 4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+
+    &--isActive {
+      transform: scaleX(1);
+    }
+
+    &--isActive .header__nav-item-mobile {
+      opacity: 1;
+    }
+  }
+
+  &__nav-item {
+    &:nth-child(-n + 3) {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      padding: rem(5px) rem(10px);
+      border: 1px solid $color-dark-grayish-violet;
+    }
+  }
 }
 
 .nav__logo {
@@ -17,13 +63,47 @@
   width: rem(25px);
   border: 2px solid $color-very-dark-violet;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: rem(5px);
+  transition: 0.3s ease-in-out;
+
+  &--isActive {
+    transform: rotate(135deg) scale(2);
+    border: 2px solid transparent;
+  }
+
+  &--isActive > .hamburger__line:before,
+  &--isActive > .hamburger__line:after {
+    transform: rotate(90deg);
+  }
 
   &__line {
+    position: relative;
     width: 100%;
     height: rem(2px);
     background-color: $color-very-dark-violet;
+  }
+
+  &__line:before {
+    content: "";
+    position: absolute;
+    transform: translateY(4px);
+    width: 100%;
+    height: rem(2px);
+    background-color: $color-very-dark-violet;
+  }
+
+  &__line:after {
+    content: "";
+    position: absolute;
+    transform: translateY(-4px);
+    width: 100%;
+    height: rem(2px);
+    background-color: $color-very-dark-violet;
+  }
+
+  @include m1-mq("medium") {
+    display: none;
   }
 }

@@ -6,6 +6,10 @@
   position: relative;
   z-index: 2;
 
+  &__logo {
+    flex-basis: 0.1;
+  }
+
   &__background-img {
     position: absolute;
     top: 0;
@@ -23,5 +27,21 @@
 
   &__link {
     padding: rem(4px);
+  }
+
+  &__container-top {
+    @include m1-mq("medium") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__cards-container {
+    @include m1-mq("medium") {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+    }
   }
 }

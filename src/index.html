@@ -9,29 +9,57 @@
 
   <body>
     <header class="header">
-      <div class="header__wrapper wrap-p">
+      <div class="header__wrapper">
         <img src="images/logo.svg" alt="" class="nav__logo" />
         <nav class="hamburger">
           <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
         </nav>
+        <ul class="header__nav-desktop">
+          <li class="header__nav-item">how we work</li>
+          <li class="header__nav-item">blog</li>
+          <li class="header__nav-item">account</li>
+          <li class="header__nav-item btn--outline-inverse">view plans</li>
+        </ul>
       </div>
     </header>
+
+    <ul class="header__nav-mobile">
+      <li class="header__nav-item-mobile">how we work</li>
+      <li class="header__nav-item-mobile">blog</li>
+      <li class="header__nav-item-mobile">account</li>
+      <li class="header__nav-item btn--outline-inverse">view plans</li>
+    </ul>
 
     <main class="hero">
       <img
         src="images/image-intro-mobile.jpg"
         alt="family picture"
-        class="hero__img"
+        class="hero__img-mobile"
       />
+      <img
+        src="images/bg-pattern-intro-left-desktop.svg"
+        alt=""
+        class="hero__img-bg-left-desktop"
+      />
+      <img
+        src="images/bg-pattern-intro-right-desktop.svg"
+        alt=""
+        class="hero__img-bg-right-desktop"
+      />
+
       <div class="cta__wrapper">
+        <img
+          src="images/image-intro-desktop.jpg"
+          alt="family picture"
+          class="hero__img-desktop"
+        />
         <img
           src="images/bg-pattern-intro-left-mobile.svg"
           alt=""
-          class="cta__bg-img-left"
+          class="cta__bg-img-left-mobile"
         />
-        <div class="cta wrap-p">
+        <div class="cta">
+          <div class="cta__separator"></div>
           <h1 class="cta__heading">
             Humanizing <br />
             your insurance.
@@ -46,109 +74,147 @@
         <img
           src="images/bg-pattern-intro-right-mobile.svg"
           alt=""
-          class="cta__bg-img-right"
+          class="cta__bg-img-right-mobile"
         />
       </div>
     </main>
 
-    <section class="home-sell wrap-p">
-      <div class="home-sell__line"></div>
-      <h1 class="home-sell__heading">We're different</h1>
-      <div class="home-sell__card">
-        <img
-          src="images/icon-snappy-process.svg"
-          alt=""
-          class="home-sell__icon"
-        />
-        <h2 class="home-sell__subheading">snappy process</h2>
-        <p class="home-sell__content">
-          Our application porcess can be completed in minutes, not hours. Don't
-          get stuck filling in tedious forms.
-        </p>
-      </div>
-      <div class="home-sell__card">
-        <img
-          src="images/icon-affordable-prices.svg"
-          alt=""
-          class="home-sell__icon"
-        />
-        <h2 class="home-sell__subheading">affordable prices</h2>
-        <p class="home-sell__content">
-          We don't want you worrying about high monthly costs. Our prices may be
-          low, but we still offer the best coverage possible.
-        </p>
-      </div>
-      <div class="home-sell__card">
-        <img
-          src="images/icon-affordable-prices.svg"
-          alt=""
-          class="home-sell__icon"
-        />
-        <h2 class="home-sell__subheading">people first</h2>
-        <p class="home-sell__content">
-          Our application porcess can be completed in minutes, not hours. Don't
-          get stuck filling in tedious forms.
-        </p>
+    <section class="home-sell">
+      <div class="home-sell__wrapper">
+        <div class="home-sell__line"></div>
+        <h1 class="home-sell__heading">We're different</h1>
+        <div class="home-sell__cards-container">
+          <div class="home-sell__card">
+            <img
+              src="images/icon-snappy-process.svg"
+              alt=""
+              class="home-sell__icon"
+            />
+            <h2 class="home-sell__subheading">snappy process</h2>
+            <p class="home-sell__content">
+              Our application porcess can be completed in minutes, not hours.
+              Don't get stuck filling in tedious forms.
+            </p>
+          </div>
+          <div class="home-sell__card">
+            <img
+              src="images/icon-affordable-prices.svg"
+              alt=""
+              class="home-sell__icon"
+            />
+            <h2 class="home-sell__subheading">affordable prices</h2>
+            <p class="home-sell__content">
+              We don't want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+          <div class="home-sell__card">
+            <img
+              src="images/icon-affordable-prices.svg"
+              alt=""
+              class="home-sell__icon"
+            />
+            <h2 class="home-sell__subheading">people first</h2>
+            <p class="home-sell__content">
+              Our application porcess can be completed in minutes, not hours.
+              Don't get stuck filling in tedious forms.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="home-about wrap-m">
-      <h1 class="home-about__heading">Find out more about how we work</h1>
-      <button class="btn--outline">how we work</button>
-      <img
-        src="images/bg-pattern-how-we-work-mobile.svg"
-        alt=""
-        class="home-about__bg-img"
-      />
-    </section>
+    <div class="home-about__wrapper">
+      <section class="home-about">
+        <h2 class="home-about__heading">
+          Find out more<span class="home-about__line-break"></span> about how we
+          work
+        </h2>
+        <div class="home-about__btn-container">
+          <button class="btn--outline">how we work</button>
+        </div>
+        <img
+          src="images/bg-pattern-how-we-work-mobile.svg"
+          alt=""
+          class="home-about__bg-img-mobile"
+        />
+        <img
+          src="images/bg-pattern-how-we-work-desktop.svg"
+          alt=""
+          class="home-about__bg-img-desktop"
+        />
+      </section>
+    </div>
 
-    <footer class="footer wrap-p">
-      <img
-        src="images/bg-pattern-footer-mobile.svg"
-        alt=""
-        class="footer__background-img"
-      />
-      <img src="images/logo.svg" alt="" class="footer__logo" />
-      <div class="social-links">
-        <img src="images/icon-facebook.svg" alt="" class="social-link__logo" />
-        <img src="images/icon-twitter.svg" alt="" class="social-link__logo" />
-        <img src="images/icon-pinterest.svg" alt="" class="social-link__logo" />
-        <img src="images/icon-instagram.svg" alt="" class="social-link__logo" />
-      </div>
-      <div class="separator--full-width"></div>
-      <div class="footer__card">
-        <div class="footer__subheading">our company</div>
-        <ul class="footer__link-list">
-          <li class="footer__link">how we work</li>
-          <li class="footer__link">why insure?</li>
-          <li class="footer__link">check price</li>
-          <li class="footer__link">reviews</li>
-        </ul>
-      </div>
-      <div class="footer__card">
-        <div class="footer__subheading">help me</div>
-        <ul class="footer__link-list">
-          <li class="footer__link">faq</li>
-          <li class="footer__link">terms of use</li>
-          <li class="footer__link">privacy policy</li>
-          <li class="footer__link">cookies</li>
-        </ul>
-      </div>
-      <div class="footer__card">
-        <div class="footer__subheading">contact</div>
-        <ul class="footer__link-list">
-          <li class="footer__link">sales</li>
-          <li class="footer__link">support</li>
-          <li class="footer__link">live chat</li>
-        </ul>
-      </div>
-      <div class="footer__card">
-        <div class="footer__subheading">others</div>
-        <ul class="footer__link-list">
-          <li class="footer__link">careers</li>
-          <li class="footer__link">press</li>
-          <li class="footer__link">licenses</li>
-        </ul>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <img
+          src="images/bg-pattern-footer-mobile.svg"
+          alt=""
+          class="footer__background-img"
+        />
+        <div class="footer__container-top">
+          <img src="images/logo.svg" alt="" class="footer__logo" />
+          <div class="social-links">
+            <img
+              src="images/icon-facebook.svg"
+              alt=""
+              class="social-link__logo"
+            />
+            <img
+              src="images/icon-twitter.svg"
+              alt=""
+              class="social-link__logo"
+            />
+            <img
+              src="images/icon-pinterest.svg"
+              alt=""
+              class="social-link__logo"
+            />
+            <img
+              src="images/icon-instagram.svg"
+              alt=""
+              class="social-link__logo"
+            />
+          </div>
+        </div>
+        <div class="separator--full-width"></div>
+        <div class="footer__cards-container">
+          <div class="footer__card">
+            <div class="footer__subheading">our company</div>
+            <ul class="footer__link-list">
+              <li class="footer__link">how we work</li>
+              <li class="footer__link">why insure?</li>
+              <li class="footer__link">check price</li>
+              <li class="footer__link">reviews</li>
+            </ul>
+          </div>
+          <div class="footer__card">
+            <div class="footer__subheading">help me</div>
+            <ul class="footer__link-list">
+              <li class="footer__link">faq</li>
+              <li class="footer__link">terms of use</li>
+              <li class="footer__link">privacy policy</li>
+              <li class="footer__link">cookies</li>
+            </ul>
+          </div>
+          <div class="footer__card">
+            <div class="footer__subheading">contact</div>
+            <ul class="footer__link-list">
+              <li class="footer__link">sales</li>
+              <li class="footer__link">support</li>
+              <li class="footer__link">live chat</li>
+            </ul>
+          </div>
+          <div class="footer__card">
+            <div class="footer__subheading">others</div>
+            <ul class="footer__link-list">
+              <li class="footer__link">careers</li>
+              <li class="footer__link">press</li>
+              <li class="footer__link">licenses</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

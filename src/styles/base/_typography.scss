@@ -4,6 +4,10 @@
 
 :root {
   font-size: 16px;
+
+  // @include m1-mq("medium") {
+  //   font-size: 14px;
+  // }
 }
 
 html,
@@ -22,7 +26,7 @@ h6 {
 
 h1 {
   line-height: 1.1;
-  font-size: rem(35px);
+  font-size: rem(60px);
 }
 
 p {
@@ -36,6 +40,15 @@ p {
 .btn--outline {
   text-transform: uppercase;
   color: $color-white;
+}
+
+/*-------------------------------*/
+/* HEADER */
+/*-------------------------------*/
+
+.header__nav-item {
+  text-transform: uppercase;
+  color: $color-dark-grayish-violet;
 }
 
 /*-------------------------------*/
@@ -54,6 +67,10 @@ p {
 
 .home-about {
   color: $color-white;
+
+  &__heading {
+    font-size: rem(35px);
+  }
 }
 
 .footer {
