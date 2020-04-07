@@ -27,3 +27,7 @@ input {
 ul {
   list-style: none;
 }
+
+.preload * {
+  transition: none !important;
+}

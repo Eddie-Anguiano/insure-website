@@ -93,6 +93,9 @@
     margin-bottom: rem(20px);
     position: relative;
     z-index: 2;
+    // animation-duration: 49s !important;
+    // animation-delay: 10s;
+    // animation-iteration-count: 3;
   }
 
   &__content {
@@ -151,6 +154,7 @@
 /*-------------------------------*/
 
 .home-about {
+  opacity: 0;
   background-color: $color-dark-violet;
   padding-top: rem(60px);
   padding-bottom: rem(60px);
